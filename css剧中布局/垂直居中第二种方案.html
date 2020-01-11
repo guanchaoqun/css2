@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    #parent{
+          width: 200px;
+          height: 600px;  
+          background: #95ce0f;
+          /* 开启相对定位 */
+          position: relative;   
+    }
+    #child{
+        width: 200px;
+        height: 200px;
+        background: #ce4c0f;
+        /* 绝对 定位   父级开启定位 想对于父级定位, 父级没有开启定位,想对于文档定位 */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    /* 
+        优点 :  父级元素是否脱离 文档 流,不影响 子级元素垂直 居中效果
+        缺点 :  transform :属性是CSS3 中新增属性,浏览器支持情况不好
+     */
+    </style>
+</head>
+<body>
+        <div id="parent">
+            123
+            <div id="child">
+                    垂直布局
+            </div>
+        </div>
+</body>
+</html>
