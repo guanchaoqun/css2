@@ -5,18 +5,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>两列布局</title>
+    <title>两列布局 第一种解决方案</title>
 </head>
+<style>
+    /* DIV 元素默认的高度是 0 需要设置高度 */
+    #left,
+    #right {
+        height: 300px;
+    }
+
+    #left {
+        /* 左边设置 了定宽 */
+        width: 300px;
+        background-color: rgb(218, 15, 15);
+        /* 浮动脱离 文档流*/
+        float: left;
+        /* 定位的层级 高于浮动 */
+        /* 设置显示层级更高 */
+        position: relative;
+    }
+    #right-fix{
+        /* 设置 为浮动 导致默认宽度为 0  */
+        width: 100%;
+        float: right;;
+        background-color: gold;
+        margin-left: -300px;
+    }
+
+    #right {
+        display: block;
+        width: 100%;
+        background-color: rgb(155, 233, 10);
+
+        margin-left: 300px;
+    }
+    #inner{
+        height: 200px;
+        background-color: gray;
+        clear: both;
+    }
+</style>
 
 <body>
-    <div>
-        <div>
+    <div id="parent">
+        <div id="left">
             什么是两列布局:
             两列布局一般情况下是指定宽与自适应 布局,两列中左列是确定上的宽度,右列是自动填满剩余所有空间的一种布局效果
             三种实现方式
             1. float +margin 属性配合使用
             2. float +overflow 属性配合使用
             3. display 属性的table 相关值 使用
+        </div>
+        <!-- 为自适应元素定义 父级元素 -->
+        <div id="right-fix">
+            <div id="right">
+                <div id="inner">111</div>
+            </div>
         </div>
     </div>
 </body>

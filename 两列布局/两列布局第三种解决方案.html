@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #parent {
+            /* 表格的单元格宽度 会自动分配   等分 50% 50%*/
+            display: table;
+            background-color: skyblue;
+            width: 100%;
+            /* 表格本身的特点是不能出现的  边框 双边框  */
+            table-layout: fixed;
+        }
+
+        #left,
+        #right {
+            height: 300px;
+            display: table-cell;
+        }
+
+        #left {
+            /* 定宽 */
+            width: 300px;
+            background-color:red;
+        }
+
+        #right {
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="left"></div>
+        <div id="right"> </div>
+    </div>
+</body>
+
+</html>
