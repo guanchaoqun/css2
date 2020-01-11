@@ -10,8 +10,22 @@
           width: 200px;
           height: 600px;  
           background: #95ce0f;
+          
+            /*
+                display属性:
+                table: 设置当前元素为<table>元素(表格)
+                table-cell :设置 当前元素为<td>元素(单元格)        
+             */
+          display: table-cell;
+            /* 
+             设置了table-cell后 vertical-align 有效
+             vertical-align 属性:用于设置文本内容 的垂直方向对齐方式;
+                top : 顶部对章
+                middle：居中对齐
+                bottom : 底部对齐
+             */
+          vertical-align: middle;
     }
-
     #child{
         width: 200px;
         height: 200px;
@@ -21,8 +35,9 @@
 </head>
 <body>
         <div id="parent">
+            123
             <div id="child">
-
+                    垂直布局
             </div>
         </div>
 </body>
