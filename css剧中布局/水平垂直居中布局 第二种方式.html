@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #parent{
+        width: 1000px;
+        height: 600px;
+        background-color: cornflowerblue;
+            /* 父级设置 想对定位   使子级想对于父级定位 */
+            position: relative;
+    }
+    #child{
+        width: 200px;
+        height: 200px;
+        background-color: cyan;
+        /* 设置绝对 定位 */
+        position: absolute;
+        /* (子级 上边 与 左边)位置   设置 定位的位置 top 距离 顶部位置  left 距离 左则 位置 */
+        top: 50%;   
+        left: 50%;
+        /* 往回调子级元素一半的距离  */
+        transform: translate(-50%,-50%);
+    }
+
+    </style>
+</head>
+<body>
+    <!-- 定义父级元素 -->
+    <div id="parent">
+        <!-- 定义子级元素 -->
+        <div id="child">
+                水平垂直居中布局第二种方法 
+        </div>
+    </div>
+</body>
+</html>

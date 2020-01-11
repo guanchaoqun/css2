@@ -5,28 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title> 水平垂直 居中布局</title>
     <style>
         #parent {
             background-color: coral;
             width: 1000px;
             height: 600px;
+            /* 单元格 */
+            display: table-cell;
+            vertical-align: middle;
         }
 
         #child {
             background-color: blueviolet;
             width: 200px;
             height: 200px;
-                
+
+            /* <table> 表格 */
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 
 <body>
     <div id="parent">
-        123
         <div id="child">
-            垂直布局
+            水平垂直 居中布局
         </div>
     </div>
 </body>
