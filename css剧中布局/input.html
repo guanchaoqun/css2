@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #demo {
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="1.php" method="POST">
+
+        text: <input type="text" name="" id=""> <br />
+        button: <input type="button" value="button"> <br>
+        checkbox: <input type="checkbox" name="one[]" value="3"> <br>
+        checkbox: <input type="checkbox" name="one[]" value="2"> <br>
+        checkbox: <input type="checkbox" name="one[]" value="1"> <br>
+        date: <input type="date" name="" id=""> <br>
+        :color: <input type="color" name="" id=""> <br>
+        email: <input type="email" name="" id=""> <br>
+        datetime: <input type="datetime" name="" id=""> <br>
+        file: <input type="file" name="file"> <br>
+        image: <input type="image" src="" alt=""> <br>
+        hidden: <input type="hidden" name=""> <br>
+        number <input type="number" name="" id=""> <br>
+        radio: <input type="radio" name="a" id=""> <br>
+        radio: <input type="radio" checked name="a" id=""> <br>
+        radio: <input type="radio" name="a" id=""> <br>
+        radio: <input type="radio" name="a" id=""> <br>
+        radio:<input type="tel" name="" id=""> <br>
+        submit:<input type="submit" value="submit"> <br>
+        submit:<button type="submit">submit</button> <br>
+        reset:<button type="reset">reset</button> <br>
+        button:<button type="button">button</button> <br>
+        menu: <button type="menu">menu</button> <br>
+        range: <input type="range" name="h" id="1"> <br>
+
+        <select name="" id="" disabled="disabled">
+            <option check value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <select name="oo" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option selected value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </form>
+
+    <form>
+        User name:<br>
+        <input type="text" name="username">
+        <br>
+        User password:<br>
+        <input type="password" name="psw">
+    </form>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+
+    <form>
+        Quantity:
+        <input type="number" name="points" min="0" max="100" step="10" value="30">
+    </form>
+
+    <form>
+        <input type="range" name="points" min="0" max="100" step="3" value="90">
+    </form>
+
+    <form>
+        Birthday (month and year):
+        <input type="month" name="bdaymonth">
+    </form>
+
+    <form>
+        Select a week:
+        <input type="week" name="week_year">
+    </form>
+
+    <form>
+        Search Google:
+        <input type="search" name="googlesearch">
+    </form>
+
+    <form>
+        Add your homepage:
+        <input type="url" name="homepage">
+    </form>
+
+
+    <div id="demo"></div>
+
+
+    <canvas id="myCanvas" background-color="#444444" width="200" height="100"></canvas>
+</body>
+
+
+
+</html>
+<script>
+
+    var c = document.getElementById("myCanvas");
+    var cxt = c.getContext("2d");
+    cxt.fillStyle = "#FF0000";
+    cxt.fillRect(0, 0, 150, 75);
+
+
+
+</script>

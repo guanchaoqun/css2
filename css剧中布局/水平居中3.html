@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>第二种水平居中布局效果</title>
+
+    <style>
+    #parent{
+        width: 100%;
+        height: 200px;
+        background-color: aqua;
+        /* 
+        开启定位
+        用哪个值都可以 为父级元素开启定位
+         */
+         position: relative;
+    }
+    #child{
+        width: 200px;
+        height: 200px;
+        background-color: brown;
+        /* 
+        当把当前元素设置为定位之后
+        如果低级元素没有 开启定位的话,当前元素是相对于页面定位的
+        如果低级元素开启了定位的话,当前元素是相对于父级元素定位的
+         */
+        position: absolute;
+        /* 子级元素的左边是居中的 */
+        left: 50%;
+            /* 设置子元素的偏移量 子元素宽度的一半*/
+        transform: translateX(-50%); 
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child"></div>
+    </div>
+</body>
+</html>
